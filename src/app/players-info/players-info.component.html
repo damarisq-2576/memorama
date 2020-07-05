@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-6">
+        <h4>Your Turn:</h4>
+        <h5>{{ (turn ? "Player 1" : "Player 2") }}</h5>
+        <p> TimeLeft: {{ timeLeft }}</p>
+        <div class="alert alert-success" role="alert" *ngIf="winner">
+            <h5>{{whoWin}}</h5>
+        </div>
+
+    </div>
+    <div class="col-6">
+
+        <h5>Points for Player 1: {{ points.ptsPlayer1 }}</h5>
+        <h5>Points for Player 2: {{ points.ptsPlayer2 }}</h5>
+
+    </div>
+</div>

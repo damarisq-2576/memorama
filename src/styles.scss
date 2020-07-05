@@ -1,0 +1,9 @@
+@import "./styling/variables";
+
+
+body{
+    background-color: $color-bg-page;
+    background-image: url("./assets/bg-pattern1.jpg");
+    background-repeat: repeat;
+    color: $color-celest;
+}
