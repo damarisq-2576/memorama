@@ -1,0 +1,19 @@
+<div class="row">
+    <ng-container *ngFor="let card of paintCards; let i = index">
+
+        <div class="col-md-3">
+                <div class=" flip-card">
+                    <div class="flip-card-body" (click)="rotateCard(card, cont+i, $event)" id={{cont+i}}>
+                        <div class="flip-card-front">
+                            <img class="cheetahCard"/>
+                        </div>
+                        <div class="flip-card-reverse">
+                            <img src='{{ "../assets/cards/" + card + ".png" }}'>
+                            
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </ng-container>
+</div>
