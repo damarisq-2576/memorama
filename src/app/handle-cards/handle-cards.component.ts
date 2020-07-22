@@ -21,7 +21,7 @@ export class HandleCardsComponent implements OnInit {
   };
 
   @Output() activeCard: EventEmitter<any> = new EventEmitter();
-  // Need to get input changes 
+  // Need to get input changes
   @Input() set unflip(unflipCards) {
     if (unflipCards.length > 0) {
       this.unrotateCards(unflipCards)
@@ -50,6 +50,7 @@ export class HandleCardsComponent implements OnInit {
     // make sure click is in front div
     if (parseInt(e.currentTarget.id) === id) {
       // toggle comparison
+      debugger
       if (!e.currentTarget.classList.contains("flipped")) {
         e.currentTarget.classList.add("flipped");
 

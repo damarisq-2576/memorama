@@ -123,6 +123,7 @@ export class BoardComponent implements OnInit {
         this.timeLeft--;
       } else {
         this.turn =!this.turn;
+        // flip cards if necessary
         this.timeLeft = this.timePlayer;
       }
     }, 1000)

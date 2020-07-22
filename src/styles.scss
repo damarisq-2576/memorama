@@ -1,9 +1,44 @@
 @import "./styling/variables";
 
+body {
+  background-color: $color-bg-page;
+  background-image: url("./assets/bg-pattern1.jpg");
+  background-repeat: repeat;
+  color: $color-celest;
+}
 
-body{
-    background-color: $color-bg-page;
-    background-image: url("./assets/bg-pattern1.jpg");
-    background-repeat: repeat;
-    color: $color-celest;
+.flex-row {
+  padding: 0;
+  margin: auto;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+
+  .flex-6 {
+    flex: 6;
+  }
+}
+
+@media (min-width: 576px) {
+  .flex-row {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .flex-row {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .flex-row {
+    max-width: 960px;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+  }
 }
