@@ -2,11 +2,10 @@
     <button type="button" class="btn btn-info" (click)="resetPlay()"> Reset</button>
         <app-players-info [points]="pts" [turn]="turn" [winner]="winner" [whoWin]="whoWin" [timeLeft]="timeLeft"></app-players-info>
 
-    
-        <ng-container *ngFor="let rowNum of [0,1,2,3,4]; let i = index">
+
+
             <!-- Painting Cards -->
             <app-handle-cards [start]="i*colNum" [columnNumb]="colNum" [allCards]="allCards" (activeCard)="selectedCard($event)" [unflip]="unflipCards" [unflipAll]="unflipAll"></app-handle-cards>
-        </ng-container>
 
 
 </div>
