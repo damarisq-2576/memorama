@@ -8,7 +8,7 @@ body {
 }
 
 .flex-row {
-  padding: 0;
+  //padding: 0;
   margin: auto;
   -ms-box-orient: horizontal;
   display: -webkit-box;
@@ -19,7 +19,8 @@ body {
   display: flex;
   flex-flow: row wrap;
   -webkit-flex-flow: row wrap;
-
+  position: relative;
+  justify-content: space-around;
   .flex-6 {
     flex: 6;
   }

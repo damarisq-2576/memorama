@@ -4,12 +4,12 @@
 
                 <div class=" flip-card">
 
-                    <div class="flip-card-body" (click)="rotateCard(card, i, $event)" id={{i}}>
+                    <div class="flip-card-body" (click)="card.touch ? rotateCard(i) : null" id={{i}} [ngClass]="{'flipped':card.revealed === true}" >
                         <div class="flip-card-front">
                             <img class="cheetahCard"/>
                         </div>
                         <div class="flip-card-reverse">
-                            <img src='{{ "../assets/cards/" + card + ".png" }}'>
+                            <img src='{{ "../assets/cards/" + card.idCard + ".png" }}'>
 
                         </div>
                     </div>
