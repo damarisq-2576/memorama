@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 interface CardInterface {
-    id: number,
-    idCard: number,
-    revealed: boolean,
-    touch: boolean,
-    active: boolean
+  id: number,
+  idCard: number,
+  revealed: boolean,
+  touch: boolean,
+  active: boolean
 }
 
 @Component({
@@ -13,7 +13,7 @@ interface CardInterface {
   styleUrls: ['./handle-cards.component.scss']
 })
 export class HandleCardsComponent {
-  @Input() allCards:CardInterface;
+  @Input() allCards: CardInterface;
   @Output() activeCard: EventEmitter<CardInterface> = new EventEmitter();
 
   constructor() { }
@@ -21,10 +21,13 @@ export class HandleCardsComponent {
 
   rotateCard(id) {
     // Set properties and correct id value to compare
-    this.allCards[id].id = id;
-    this.allCards[id].revealed = true;
-    this.allCards[id].active = true;
-    this.activeCard.emit(this.allCards);
+    if (this.allCards[id].revealed === false && this.allCards[id].active === false) {
+      this.allCards[id].id = id;
+      this.allCards[id].revealed = true;
+      this.allCards[id].active = true;
+      this.activeCard.emit(this.allCards);
+    }
+
   }
 
 }

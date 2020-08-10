@@ -90,7 +90,7 @@ export class BoardComponent implements OnInit {
           return x;
         }
       });
-      if (cardsHistory[0].idCard == cardsHistory[1].idCard) {
+      if (cardsHistory[0].idCard === cardsHistory[1].idCard) {
         if (this.turn) {
           this.pts.ptsPlayer1++;
         } else {
